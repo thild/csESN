@@ -177,7 +177,6 @@ class ESN():
         # step the reservoir through the given input,output pairs:
         states = np.zeros((inputs.shape[0], self.n_reservoir))
         for n in range(1, inputs.shape[0]):
-            print(n)
             states[n, :] = self._update(states[n - 1], inputs_scaled[n, :],
                                         teachers_scaled[n - 1, :])
 
